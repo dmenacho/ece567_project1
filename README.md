@@ -37,6 +37,7 @@ Online training
 | `quadruped` | `quadruped_position` |
 | `cheetah` | `cheetah_speed` |
 
+Replace in this example command
 ```
 python -m url_benchmark.train_online agent=diayn task=quadruped_walk reward_free=false custom_reward=quadruped_position load_model="path.pt" save_video=True
 ```
