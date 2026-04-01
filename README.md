@@ -53,3 +53,8 @@ From your device containing the logs
 
 ### FB
 ![FB quadruped](./FB_quadruped.gif)
+
+Enviroment generation used by  Weijia
+```
+conda create -n RL2 python=3.8 ipython -y, conda activate RL2, conda install pytorch torchvision pytorch-cuda=11.8 -c pytorch -c nvidia -y, pip install "pip<24.1" "setuptools==65.5.0" "wheel==0.38.4", pip install --progress-bar off -r requirements.txt, export MUJOCO_GL=egl.
+```
