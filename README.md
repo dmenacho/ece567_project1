@@ -45,3 +45,9 @@ Hiplot for Monitoring Training
 
 From your device containing the logs
 `python -m hiplot url_benchmark.simple_hiplogs.load --port=XXXX`
+
+## Results
+
+![DIAYN quadruped](diayn.gif)
+
+![FB quadruped](fb.gif)
