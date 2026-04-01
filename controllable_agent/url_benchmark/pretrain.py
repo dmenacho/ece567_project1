@@ -439,30 +439,6 @@ class BaseWorkspace(tp.Generic[C]):
             episode += 1
             self.video_recorder.save(f'{self.global_frame}.mp4')
 
-        # if custom_reward == 'quadruped_pos' and len(vx_list) > 0 and target_vx is not None:
-        #     final_vx = vx_list[-1]
-        #     final_error = float(np.linalg.norm(final_vx - target_vx))
-
-        #     eval_csv_path = self.work_dir / "eval_episode_metrics.csv"
-        #     file_exists = eval_csv_path.exists()
-
-        #     row = {
-        #         "step": self.global_step,
-        #         "train_episode": self.global_episode,
-        #         "eval_episode": episode,
-        #         "target_vx_x": float(target_vx[0]),
-        #         "target_vx_y": float(target_vx[1]),
-        #         "final_vx_x": float(final_vx[0]),
-        #         "final_vx_y": float(final_vx[1]),
-        #         "final_error_l2": final_error,
-        #     }
-
-        #     with open(eval_csv_path, "a", newline="") as f:
-        #         writer = csv.DictWriter(f, fieldnames=list(row.keys()))
-        #         if not file_exists:
-        #             writer.writeheader()
-        #         writer.writerow(row)
-
         if custom_reward is not None and len(vx_list) > 0 and target_vx is not None:
             final_vx = vx_list[-1]
             final_error = float(final_vx - target_vx)
