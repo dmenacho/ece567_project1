@@ -23,6 +23,20 @@ Task = enviroment_task
 | `Hopper` | `hop`, `stand`, `jump`, `hop_backward` |
 | `jaco` | `reach_top_left`, `reach_top_right`, `reach_bottom_left`, `reach_bottom_right` |
 | `point_mass_maze` | `reach_top_left`, `reach_top_right`, `reach_bottom_left`, `reach_bottom_right` |
+
+Replace in this example command
 ```
 python -m url_benchmark.pretrain agent=diayn task=hopper_jump 
+```
+
+Online training
+
+| Environment | Custom_reward |
+|---|---|
+| `walker` | `walker_position` |
+| `quadruped` | `quadruped_position` |
+| `cheetah` | `cheetah_speed` |
+
+```
+python -m url_benchmark.train_online agent=diayn task=quadruped_walk reward_free=false custom_reward=quadruped_position load_model="path.pt" save_video=True
 ```
