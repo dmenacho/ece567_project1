@@ -48,6 +48,8 @@ From your device containing the logs
 
 ## Results
 
-![DIAYN quadruped](diayn.gif)
+### DIAYN
+![DIAYN quadruped](./Diayn_quadruped.gif)
 
-![FB quadruped](fb.gif)
+### FB
+![FB quadruped](./FB_quadruped.gif)
