@@ -14,7 +14,15 @@ sudo apt-get install -y libglfw3 libglew2.0 libgl1-mesa-glx libosmesa6
 Pretraining step
 
 Agent = `diayn`, `fb_ddpg`
-Task = <environemnt>_<task>
+Task = enviroment_task
+| Environment | Tasks |
+|---|---|
+| `walker` | `stand`, `walk`, `run`, `flip` |
+| `quadruped` | `walk`, `run`, `stand`, `jump` |
+| `cheetah` | `run`, `run_backward`, `walk`, `walk_backward` |
+| `Hopper` | `hop`, `stand`, `jump`, `hop_backward` |
+| `jaco` | `reach_top_left`, `reach_top_right`, `reach_bottom_left`, `reach_bottom_right` |
+| `point_mass_maze` | `reach_top_left`, `reach_top_right`, `reach_bottom_left`, `reach_bottom_right` |
 ```
 python -m url_benchmark.pretrain agent=diayn task=hopper_jump 
 ```
